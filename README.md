@@ -18,18 +18,21 @@ Install it into a directory mentioned in `PATH` so that it can be invoked from
 anywhere.
 
 On Linux / Unix like systems this would be
+
 `install -m755 ./accio /usr/local/bin` 
 
 which would copy the file to the directory `/usr/local/bin` and set the
 necessary permissions to allow execution of the program from any user
 
-Now to download url the command would look like `accio URL`
+Now to download url the command would look like 
+
+`accio URL`
 
 for example running the following will download the 64 bit Alpine linux
 installer and place the file as `alpine-standard-3.21.3-x86_64.iso` in the
 current directory
 
-`https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-standard-3.21.3-x86_64.iso`
+`accio https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-standard-3.21.3-x86_64.iso`
 
 ## Implementation overview
 Uses `http.Get` to get the file response and a custom copying function which
